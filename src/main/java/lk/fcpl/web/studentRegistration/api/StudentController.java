@@ -19,7 +19,6 @@ import java.util.NoSuchElementException;
  * @since : 2021-02-26
  **/
 @RestController
-@CrossOrigin
 @RequestMapping("/api/v1/students")
 public class StudentController {
     @Autowired

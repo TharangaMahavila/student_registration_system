@@ -17,7 +17,6 @@ import java.util.NoSuchElementException;
  * @author:Tharanga Mahavila <tharangamahavila@gmail.com>
  * @since : 2021-02-23
  **/
-@CrossOrigin
 @RequestMapping("/api/v1/courses")
 @RestController
 public class CourseController {

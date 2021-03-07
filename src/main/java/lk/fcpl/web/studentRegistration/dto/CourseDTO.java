@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 
 /**
@@ -17,7 +16,10 @@ public class CourseDTO implements Serializable {
 
     private int id;
     @NotNull(message = "Course name is reqired")
+    @Size(min = 3,message = "Course Name should be at least 3 characters")
+    @NotEmpty(message = "Course name should not be empty") @NotBlank(message = "Course name should not be blank")
     private String name;
     @NotNull(message = "Course duration is reqired")
+    @NotEmpty(message = "Course duration should not be empty") @NotBlank(message = "Course duration should not be blank")
     private String duration;
 }
